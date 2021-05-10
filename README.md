@@ -1,4 +1,4 @@
-# ACL_2021_Submission
+# ACL2021 Paper
 
 ***OntoED: Low-resource Event Detection with Ontology Embedding***
 
