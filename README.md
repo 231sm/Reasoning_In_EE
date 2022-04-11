@@ -10,7 +10,7 @@
 # Brief Introduction
 OntoED is a model that resolves event detection under low-resource conditions. It models the relationship between event types through ontology embedding: it can transfer knowledge of high-resource event types to low-resource ones, and the unseen event type can establish connection with seen ones via event ontology.
 
-# How abouth the Dataset
+# How about the Dataset
 **OntoEvent**  is proposed for ED and also annotated with correlations among events. It contains 13 supertypes with 100 subtypes, derived from 4,115 documents with 60,546 event instances. 
 
 ## Statistics
