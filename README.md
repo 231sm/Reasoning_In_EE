@@ -5,7 +5,7 @@
 </p>
 
 
-🍎This repository is a official repository for $\texttt{OntoEvent}$ dataset and  $\texttt{OntoED}$  model, which has firstly proposed in a paper: [OntoED: Low-resource Event Detection with Ontology Embedding](https://arxiv.org/pdf/2105.10922.pdf), accepted by ACL 2021 main conference. 
+🍎This repository is a official repository for **OntoEvent** dataset and **OntoED**  model, which has firstly proposed in a paper: [OntoED: Low-resource Event Detection with Ontology Embedding](https://arxiv.org/pdf/2105.10922.pdf), accepted by ACL 2021 main conference. 
 
 # Brief Introduction
 OntoED is a model that resolves event detection under low-resource conditions. It models the relationship between event types through ontology embedding: it can transfer knowledge of high-resource event types to low-resource ones, and the unseen event type can establish connection with seen ones via event ontology.
@@ -22,7 +22,7 @@ ACE 2005 		| 599 | 4,090 | 8 | 33 | None |
 TAC KBP 2017 	| 167 | 4,839 | 8 | 18  | None |
 FewEvent 		      | - | 70,852 | 19 | 100  | None |
 MAVEN 			| 4,480 | 111,611 | 21 | 168  | None |
-$\texttt{OntoEvent}$	| 4,115 | 60,546 | 13 | 100 | 3,804 |
+OntoEvent	| 4,115 | 60,546 | 13 | 100 | 3,804 |
 
 ## Data Format
 The OntoEvent dataset is stored in json format.
