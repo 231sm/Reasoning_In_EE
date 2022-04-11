@@ -5,7 +5,7 @@
 </p>
 
 
-🍎这个项目针对**OntoEvent**数据集和**OntoED**模型，是在**[OntoED: Low-resource Event Detection with Ontology Embedding](https://arxiv.org/pdf/2105.10922.pdf)**论文中提出的，该论文已被**ACL2021**主会录用。
+🍎这个项目针对**OntoEvent**数据集和**OntoED**模型，是在[OntoED: Low-resource Event Detection with Ontology Embedding](https://arxiv.org/pdf/2105.10922.pdf)论文中提出的，该论文已被**ACL2021**主会录用。
 
 
 # 项目简介
