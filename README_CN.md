@@ -5,8 +5,7 @@
 </p>
 
 
-🍎这是针对[**OntoED**](https://github.com/231sm/Reasoning_In_EE)项目的官方实现代码。这个模型是在**[OntoED: Low-resource Event Detection with Ontology Embedding](https://aclanthology.org/2021.acl-long.220)**论文中提出来的，该论文已被**ACL2021**主会录用。
-这个项目针对**OntoEvent**数据集和**OntoED**模型，是在**[OntoED: Low-resource Event Detection with Ontology Embedding](https://arxiv.org/pdf/2105.10922.pdf)**论文中提出的，该论文已被**ACL2021**主会录用。
+🍎这个项目针对**OntoEvent**数据集和**OntoED**模型，是在**[OntoED: Low-resource Event Detection with Ontology Embedding](https://arxiv.org/pdf/2105.10922.pdf)**论文中提出的，该论文已被**ACL2021**主会录用。
 
 
 # 项目简介
