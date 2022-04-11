@@ -5,13 +5,13 @@
 </p>
 
 
-🍎This repository is a official repository for **OntoEvent** dataset and **OntoED**  model, which has firstly proposed in a paper: [OntoED: Low-resource Event Detection with Ontology Embedding](https://arxiv.org/pdf/2105.10922.pdf), accepted by ACL 2021 main conference. 
+🍎This repository is a official repository for **OntoEvent** dataset and **OntoED** model, which has firstly proposed in a paper: [OntoED: Low-resource Event Detection with Ontology Embedding](https://arxiv.org/pdf/2105.10922.pdf), accepted by ACL 2021 main conference. 
 
 # Brief Introduction
 OntoED is a model that resolves event detection under low-resource conditions. It models the relationship between event types through ontology embedding: it can transfer knowledge of high-resource event types to low-resource ones, and the unseen event type can establish connection with seen ones via event ontology.
 
 # How about the Dataset
-**OntoEvent**  is proposed for ED and also annotated with correlations among events. It contains 13 supertypes with 100 subtypes, derived from 4,115 documents with 60,546 event instances. 
+[**OntoEvent**](https://github.com/231sm/Reasoning_In_EE/tree/main/OntoEvent) is proposed for ED and also annotated with correlations among events. It contains 13 supertypes with 100 subtypes, derived from 4,115 documents with 60,546 event instances. 
 
 ## Statistics
 The statistics of OntoEvent are shown below, and the detailed data schema can be referred to our paper. 
@@ -25,9 +25,9 @@ MAVEN 			| 4,480 | 111,611 | 21 | 168  | None |
 OntoEvent	| 4,115 | 60,546 | 13 | 100 | 3,804 |
 
 ## Data Format
-The OntoEvent dataset is stored in json format.
+[OntoEvent](https://github.com/231sm/Reasoning_In_EE/tree/main/OntoEvent) dataset is stored in json format.
 
-🍒For each *event instance* in ```event_dict_data_on_doc.json```, the data format is as below:
+🍒For each *event instance* in [```event_dict_data_on_doc.json```](https://github.com/231sm/Reasoning_In_EE/blob/main/OntoEvent/event_dict_data_on_doc.json.zip), the data format is as below:
 
 ```
 {
@@ -41,7 +41,7 @@ The OntoEvent dataset is stored in json format.
 	'event_type': ''
 }
 ```
-🍒For each *event relation* in ```event_relation.json```, we list the *event instance pair*, and the data format is as below:
+🍒For each *event relation* in [```event_relation.json```](https://github.com/231sm/Reasoning_In_EE/blob/main/OntoEvent/event_relation.json), we list the *event instance pair*, and the data format is as below:
 
 ```
 'EVENT_RELATION_1': [ 
@@ -84,7 +84,7 @@ The OntoEvent dataset is stored in json format.
 
 # How about the Project
 🤗 Thank you very much for your interest in our work. 
-We are sorry for not dealing with the issues in time, and have uploaded full original version of **OntoEvent** dataset. The full project with code is still on the company server, and we are applying for downloading as well as disclosure, further remanaging the code, which would cost a few days. 
+We are sorry for not dealing with the issues in time, and have uploaded full original version of [**OntoEvent**](https://github.com/231sm/Reasoning_In_EE/tree/main/OntoEvent) dataset. The full project with code is still on the company server, and we are applying for downloading as well as disclosure, further remanaging the code, which would cost a few days. 
 
 
 # Papers for the Project & How to Cite
