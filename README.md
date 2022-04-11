@@ -1,7 +1,7 @@
 [**中文**](https://github.com/231sm/Reasoning_In_EE/blob/main/README_CN.md) | [**English**](https://github.com/231sm/Reasoning_In_EE/blob/main/README.md)
 
 <p align="center">
-  	<font size=12><strong>OntoED: A Model for Low-resource Event Detection with Ontology Embedding</strong></font>
+  	<font size=20><strong>OntoED: A Model for Low-resource Event Detection with Ontology Embedding</strong></font>
 </p>
 
 
