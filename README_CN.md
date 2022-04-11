@@ -43,7 +43,7 @@ OntoEvent	| 4,115 | 60,546 | 13 | 100 | 3,804 |
 }
 ```
 
-🍒对于[```event_relation.json ```](https://github.com/231sm/Reasoning_In_EE/blob/main/OntoEvent/event_relation.json)文件中的*事件关系* , 我们列出了*事件实例对*，数据格式如下：
+🍒对于[```event_relation.json```](https://github.com/231sm/Reasoning_In_EE/blob/main/OntoEvent/event_relation.json)文件中的*事件关系* , 我们列出了*事件实例对*，数据格式如下：
 
 ```
 'EVENT_RELATION_1': [ 
