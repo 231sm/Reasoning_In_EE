@@ -12,10 +12,10 @@
 OntoED是解决低资源条件下事件检测的模型，通过本体表示学习建模了事件类别之间的关系：可以把样本多的事件类型知识迁移到样本少的事件类型上，而且未见过的事件类型可以通过本体建立起和已出现过的事件类型之间的联系。
 
 # 关于数据集
-**OntoEvent** 是针对事件检测任务提出的数据集，并且包含事件间关系的标注。其中包含13个父类，100个子类, 源于4,115 篇文档，涉及60,546 个事件实例。
+[**OntoEvent**](https://github.com/231sm/Reasoning_In_EE/tree/main/OntoEvent)是针对事件检测任务提出的数据集，并且包含事件间关系的标注。其中包含13个父类，100个子类, 源于4,115 篇文档，涉及60,546 个事件实例。
 
 ## 数据统计
-OntoEvent数据集的数据统计情况如下所示，其中详细的数据模式，比如事件上下位和事件间关联信息可以参考论文中的附录表格。
+[OntoEvent](https://github.com/231sm/Reasoning_In_EE/tree/main/OntoEvent)数据集的数据统计情况如下所示，其中详细的数据模式，比如事件上下位和事件间关联信息可以参考论文中的附录表格。
 
 数据集 		| 文档数 | 实例数 | 父类数目 | 子类数目 | 事件间关联数目 |
 | :----------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- |
@@ -26,9 +26,9 @@ MAVEN 			| 4,480 | 111,611 | 21 | 168  | 无 |
 OntoEvent	| 4,115 | 60,546 | 13 | 100 | 3,804 |
 
 ## 数据格式
-OntoEvent数据集以json格式存储。
+[OntoEvent](https://github.com/231sm/Reasoning_In_EE/tree/main/OntoEvent)数据集以json格式存储。
 
-🍒对于```event_dict_data_on_doc.json```文件中的每个*事件实例* , 数据格式如下：
+🍒对于[```event_dict_data_on_doc.json```](https://github.com/231sm/Reasoning_In_EE/blob/main/OntoEvent/event_dict_data_on_doc.json.zip)文件中的每个*事件实例* , 数据格式如下：
 
 ```
 {
@@ -43,7 +43,7 @@ OntoEvent数据集以json格式存储。
 }
 ```
 
-🍒对于```event_relation.json ```文件中的*事件关系* , 我们列出了*事件实例对*，数据格式如下：
+🍒对于[```event_relation.json ```](https://github.com/231sm/Reasoning_In_EE/blob/main/OntoEvent/event_relation.json)文件中的*事件关系* , 我们列出了*事件实例对*，数据格式如下：
 
 ```
 'EVENT_RELATION_1': [ 
@@ -86,7 +86,7 @@ OntoEvent数据集以json格式存储。
 
 # 有关项目
 🤗 非常感谢您对我们的工作感兴趣。
-我们很抱歉没有及时处理github上的提问，目前已上传完整原始版本的**OntoEvent**数据集。完整的项目代码还在公司服务器上，我们正在申请下载和披露，后面也将整理一下我们的代码，这需要一些时间。
+我们很抱歉没有及时处理github上的提问，目前已上传完整原始版本的[**OntoEvent**](https://github.com/231sm/Reasoning_In_EE/tree/main/OntoEvent)数据集。完整的项目代码还在公司服务器上，我们正在申请下载和披露，后面也将整理一下我们的代码，这需要一些时间。
 
 
 # 有关论文
