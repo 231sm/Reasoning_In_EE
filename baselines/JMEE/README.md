@@ -1,5 +1,5 @@
 # Jointly Multiple Events Extraction (JMEE)
-This is the code of the Jointly Multiple Events Extraction (JMEE) in [our EMNLP 2018 paper](https://arxiv.org/abs/1809.09078). ***Reproduced results with carefully hyper-parameter tuning, and we obtained better baseline results.***
+This is the code of the Jointly Multiple Events Extraction (JMEE) in [EMNLP 2018 paper](https://arxiv.org/abs/1809.09078). ***Reproduced results with carefully hyper-parameter tuning, and we obtained better baseline results.***
 
 ## Requirement
 
