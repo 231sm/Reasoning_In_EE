@@ -14,9 +14,15 @@
 
 **本项目使用的评估指标采用清华大学[MAVEN](https://github.com/THU-KEG/MAVEN-dataset)的计算方式，使用多分类方式建模问题，所以调用`sklearn.metrics`相关方法进行指标计算。**
 
-![](https://github.com/231sm/Reasoning_In_EE/blob/main/baselines/equations.png)
+由于多分类任务下micro指标Precision、Recall和F1是相等的（因为多分类的micro计算中FN=FP），本论文中采用的是macro的Precision和Recall计算方式。同时，与其他事件抽取任务保持一致地，本文采用micro方式计算F1 score指标。
 
-### 实际案例说明
+下面就论文中部分基线实验结果中出现的情况进行讨论。
+
+### Micro F1 score比Precision / Recall高的情形
+
+![](./eq1.png)
+
+#### 实际案例说明
 
 以3分类，10个样本为例，假设样本标签为`y=[0,0,0,1,1,1,1,2,2,2]`，运行如下代码：
 
@@ -30,12 +36,12 @@ while True:
     pred = [randint(0, 2) for _ in range(len(y))]
     if len(set(pred)) < num_labels:
         continue
-    pi = precision_score(y, pred, average='micro')
-    pa = precision_score(y, pred, average='macro')
-    ri = recall_score(y, pred, average='micro')
-    ra = recall_score(y, pred, average='macro')
-    fi = f1_score(y, pred, average='micro')
-    fa = f1_score(y, pred, average='macro')
+    pi = precision_score(y, pred, average='micro', labels=[0, 1, 2])
+    pa = precision_score(y, pred, average='macro', labels=[0, 1, 2])
+    ri = recall_score(y, pred, average='micro', labels=[0, 1, 2])
+    ra = recall_score(y, pred, average='macro', labels=[0, 1, 2])
+    fi = f1_score(y, pred, average='micro', labels=[0, 1, 2])
+    fa = f1_score(y, pred, average='macro', labels=[0, 1, 2])
     if fi > pa and fi > ra:
         print('pred =', pred)
         print('micro: p = {:.4f}, r = {:.4f}, f1 = {:.4f}'.format(pi, ri, fi))
@@ -67,3 +73,55 @@ macro: p = 0.1500, r = 0.1944, f1 = 0.1667
 
 # ...
 ```
+
+### Macro F1 score比Precision / Recall低的情形
+
+![](./eq2.png)
+
+#### 实际案例说明
+
+使用同样的标签数据`y=[0,0,0,1,1,1,1,2,2,2]`，对上一部分代码稍作改动：
+
+```python
+from random import randint
+from sklearn.metrics import f1_score, precision_score, recall_score
+
+num_labels = 3
+y = [0, 0, 0, 1, 1, 1, 1, 2, 2, 2]
+while True:
+    pred = [randint(0, 2) for _ in range(len(y))]
+    if len(set(pred)) < num_labels:
+        continue
+    pi = precision_score(y, pred, average='micro', labels=[0, 1, 2])
+    pa = precision_score(y, pred, average='macro', labels=[0, 1, 2])
+    ri = recall_score(y, pred, average='micro', labels=[0, 1, 2])
+    ra = recall_score(y, pred, average='macro', labels=[0, 1, 2])
+    fi = f1_score(y, pred, average='micro', labels=[0, 1, 2])
+    fa = f1_score(y, pred, average='macro', labels=[0, 1, 2])
+    if fa < pa and fa < ra:
+        print('pred =', pred)
+        print('macro: p = {:.4f}, r = {:.4f}, f1 = {:.4f}'.format(pa, ra, fa))
+```
+
+可以找出满足要求的几组预测`pred`：
+
+```python
+# Case 0:
+pred = [0, 2, 0, 1, 2, 0, 2, 2, 0, 0]
+macro: p = 0.5500, r = 0.4167, f1 = 0.3952
+
+# Case 1:
+pred = [1, 0, 0, 2, 1, 1, 1, 0, 1, 2]
+macro: p = 0.5889, r = 0.5833, f1 = 0.5778
+
+# Case 2:
+pred = [2, 0, 2, 1, 1, 1, 1, 2, 1, 2]
+macro: p = 0.7667, r = 0.6667, f1 = 0.6534
+
+# Case 3:
+pred = [0, 2, 0, 1, 2, 1, 2, 2, 2, 2]
+macro: p = 0.8333, r = 0.7222, f1 = 0.7111
+
+# ...
+```
+
