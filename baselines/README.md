@@ -22,19 +22,27 @@
 
 于是：
 
-$\rm P_{macro}=\frac{1}{N}\sum_{i=1}^{N}P_{macro,i}=\frac{1}{N}\sum_{i=1}^{N}\frac{{TP}_{i}}{{TP}_{i}+{FP}_{i}}$
+$\rm P_{macro}=\frac{1}{N}\sum_{i=1}^{N}P_{macro,i}$
 
-$=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{C_{ii}+\sum_{j\ne i}{C_{ji}}}=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ji}}.$
+$\rm =\frac{1}{N}\sum_{i=1}^{N}\frac{{TP}_{i}}{{TP}_{i}+{FP}_{i}}$
 
-$\rm R_{macro}=\frac{1}{N}\sum_{i=1}^{N}R_{macro,i}=\frac{1}{N}\sum_{i=1}^{N}\frac{{TP}_i}{{TP}_{i}+{FN}_{i}}$
+$\rm =\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{C_{ii}+\sum_{j\ne i}{C_{ji}}}$
 
-$=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{C_{ii}+\sum_{j\ne i}C_{ij}}=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ij}}.$
+$\rm=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ji}}.$
 
-$\rm F1_{micro}=\frac{TP}{TP+FN}=\frac{\sum_{i=1}^{N}{C_{ii}}}{\sum_{i=1}^{N}{C_{ii}}+\sum_{i\ne j}C_{ij}}=\frac{\sum_{i=1}^{N}C_{ii}}{M}$
+$\rm R_{macro}=\frac{1}{N}\sum_{i=1}^{N}R_{macro,i}$
+
+$\rm=\frac{1}{N}\sum_{i=1}^{N}\frac{{TP}_i}{{TP}_{i}+{FN}_{i}}$
+
+$\rm =\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{C_{ii}+\sum_{j\ne i}C_{ij}}$
+
+$\rm =\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ij}}.$
+
+$\rm F1_{micro}=\frac{TP}{TP+FN}=\frac{\sum_{i=1}^{N}{C_{ii}}}{\sum_{i=1}^{N}{C_{ii}}+\sum_{i\ne j}C_{ij}}=\frac{\sum_{i=1}^{N}C_{ii}}{M}.$
 
 不妨从$\rm F1_{micro}\gt R_{macro}$开始说明。
 
-注意到$\rm M=\sum_{i=1}^{N}\sum_{j=1}^{N}C_{}$，于是有$\rm \frac{\sum_{i=1}^{N}C_{ii}}{\sum_{i=1}^{N}(\sum_{j=1}^{N}C_{ij})}\gt\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ij}}$
+注意到$\rm M=\sum_{i=1}^{N}\sum_{j=1}^{N}C_{ij}$，于是有$\rm \frac{\sum_{i=1}^{N}C_{ii}}{\sum_{i=1}^{N}(\sum_{j=1}^{N}C_{ij})}\gt\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ij}}$
 
 令$\rm a_i=C_{ii},b_i=\sum_{j}C_{ij}(0\le a_i\le b_i,1\le i\le N)$即第$i$类样本的数量，那么原命题等价于：$\rm \frac{\sum_{i}{a_i}}{\sum_{i}b_i}\gt \frac{1}{N}\sum_{i}\frac{a_i}{b_i}.$
 
