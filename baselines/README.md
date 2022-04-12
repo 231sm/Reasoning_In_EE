@@ -16,27 +16,19 @@
 
 由于多分类任务下micro指标Precision、Recall和F1是相等的（因为多分类的micro计算中FN=FP），本论文中采用的是macro的Precision和Recall计算方式。同时，与其他事件抽取任务保持一致地，本文采用micro方式计算F1 score指标。
 
-下面对论文中的情况，即$F1_{micro}\gt P_{macro},R_{macro}$的情形进行说明。
+下面对论文中的情况，即$\rm F1_{micro}\gt P_{macro},R_{macro}$的情形进行说明。
 
 假设对一个$N$分类任务，设样本总量为$M$，预测的混淆矩阵为$C$，其中$C_{ij}$表示标签为第$i$类，预测为第$j$类的样本数，$1\leq i,j\le N$。
 
 于是：
 
-$\rm P_{macro}=\frac{1}{N}\sum_{i=1}^{N}P_{macro,i}$
+$\rm P_{macro}=\frac{1}{N}\sum_{i=1}^{N}P_{macro,i}=\frac{1}{N}\sum_{i=1}^{N}\frac{{TP}_i}{{TP}_i+{FP}_i}$
 
-$\rm =\frac{1}{N}\sum_{i=1}^{N}\frac{{TP}_{i}}{{TP}_{i}+{FP}_{i}}$
+$\rm =\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{C_{ii}+\sum_{j\ne i}{C_{ji}}}=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ji}}.$
 
-$\rm =\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{C_{ii}+\sum_{j\ne i}{C_{ji}}}$
+$\rm R_{macro}=\frac{1}{N}\sum_{i=1}^{N}R_{macro,i}=\frac{1}{N}\sum_{i=1}^{N}\frac{{TP}_i}{{TP}_i+{FN}_i}$
 
-$\rm=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ji}}.$
-
-$\rm R_{macro}=\frac{1}{N}\sum_{i=1}^{N}R_{macro,i}$
-
-$\rm=\frac{1}{N}\sum_{i=1}^{N}\frac{{TP}_i}{{TP}_{i}+{FN}_{i}}$
-
-$\rm =\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{C_{ii}+\sum_{j\ne i}C_{ij}}$
-
-$\rm =\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ij}}.$
+$\rm =\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{C_{ii}+\sum_{j\ne i}C_{ij}}=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ij}}.$
 
 $\rm F1_{micro}=\frac{TP}{TP+FN}=\frac{\sum_{i=1}^{N}{C_{ii}}}{\sum_{i=1}^{N}{C_{ii}}+\sum_{i\ne j}C_{ij}}=\frac{\sum_{i=1}^{N}C_{ii}}{M}.$
 
