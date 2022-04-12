@@ -14,7 +14,7 @@
 
 **本项目使用的评估指标采用清华大学[MAVEN](https://github.com/THU-KEG/MAVEN-dataset)的计算方式，使用多分类方式建模问题，所以调用`sklearn.metrics`相关方法进行指标计算。**
 
-![公式截图](https://github.com/231sm/Reasoning_In_EE/tree/main/baselines/equations.png)
+![](https://github.com/231sm/Reasoning_In_EE/blob/main/baselines/equations.png)
 
 ### 实际案例说明
 
