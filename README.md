@@ -5,7 +5,7 @@
 </p>
 
 
-🍎This repository is a official repository for **OntoEvent** dataset and **OntoED** model, which has firstly proposed in a paper: [OntoED: Low-resource Event Detection with Ontology Embedding](https://arxiv.org/pdf/2105.10922.pdf), accepted by ACL 2021 main conference. 
+🍎This project is a official repository for **OntoEvent** dataset and **OntoED** model, which has firstly been proposed in a paper: [OntoED: Low-resource Event Detection with Ontology Embedding](https://arxiv.org/pdf/2105.10922.pdf), accepted by ACL 2021 main conference. 
 
 # Brief Introduction
 OntoED is a model that resolves event detection under low-resource conditions. It models the relationship between event types through ontology embedding: it can transfer knowledge of high-resource event types to low-resource ones, and the unseen event type can establish connection with seen ones via event ontology.
@@ -84,7 +84,7 @@ OntoEvent	| 4,115 | 60,546 | 13 | 100 | 3,804 |
 
 # How about the Project
 🤗 Thank you very much for your interest in our work. 
-We are sorry for not dealing with the issues in time, and have uploaded full original version of [**OntoEvent**](https://github.com/231sm/Reasoning_In_EE/tree/main/OntoEvent) dataset. The full project with code is still on the company server, and we are applying for downloading as well as disclosure, further remanaging the code, which would cost a few days. 
+We are sorry for not dealing with the issues in time, and have uploaded full original version of [**OntoEvent**](https://github.com/231sm/Reasoning_In_EE/tree/main/OntoEvent) dataset. The full project with code is still on the company server, and we are applying for downloading as well as disclosure, further remanaging the code, which would cost a few days. We have firstly pushed the some [baselines](https://github.com/231sm/Reasoning_In_EE/tree/main/baselines). 
 
 
 # Papers for the Project & How to Cite
