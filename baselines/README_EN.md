@@ -2,7 +2,7 @@
 
 # Baselines
 
-This folder contains implementations of ED baselines on our dataset (***including the experiment results and download link to pre-trained model weights***). ***Reproduced results with carefully hyper-parameter tuning, and we obtained better baseline results.***
+This folder contains implementations of ED baselines on our dataset (***including the experiment results and download link to pre-trained model weights***). ***Reproduced results with carefully hyper-parameter tuning and more training stpes, and we obtained better baseline results.***
 
 ## Included Baseline Models
 
