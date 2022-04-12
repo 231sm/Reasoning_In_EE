@@ -22,9 +22,13 @@
 
 于是：
 
-$\rm P_{macro}=\frac{1}{N}\sum_{i=1}^{N}P_{macro,i}=\frac{1}{N}\sum_{i=1}^{N}\frac{{TP}_{i}}{{TP}_{i}+{FP}_{i}}=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{C_{ii}+\sum_{j\ne i}{C_{ji}}}=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ji}}$
+$\rm P_{macro}=\frac{1}{N}\sum_{i=1}^{N}P_{macro,i}=\frac{1}{N}\sum_{i=1}^{N}\frac{{TP}_{i}}{{TP}_{i}+{FP}_{i}}$
 
-$\rm R_{macro}=\frac{1}{N}\sum_{i=1}^{N}R_{macro,i}=\frac{1}{N}\sum_{i=1}^{N}\frac{{TP}_i}{{TP}_{i}+{FN}_{i}}=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{C_{ii}+\sum_{j\ne i}C_{ij}}=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ij}}$
+$=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{C_{ii}+\sum_{j\ne i}{C_{ji}}}=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ji}}.$
+
+$\rm R_{macro}=\frac{1}{N}\sum_{i=1}^{N}R_{macro,i}=\frac{1}{N}\sum_{i=1}^{N}\frac{{TP}_i}{{TP}_{i}+{FN}_{i}}$
+
+$=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{C_{ii}+\sum_{j\ne i}C_{ij}}=\frac{1}{N}\sum_{i=1}^{N}\frac{C_{ii}}{\sum_{j=1}^{N}C_{ij}}.$
 
 $\rm F1_{micro}=\frac{TP}{TP+FN}=\frac{\sum_{i=1}^{N}{C_{ii}}}{\sum_{i=1}^{N}{C_{ii}}+\sum_{i\ne j}C_{ij}}=\frac{\sum_{i=1}^{N}C_{ii}}{M}$
 
