@@ -44,7 +44,7 @@ from transformers import (
 )
 from data_utils import convert_examples_to_features, processors
 from sklearn.metrics import f1_score,precision_score,recall_score
-from ontoed import OntoED, BERT
+from ontoed import OntoED
 
 
 logger = logging.getLogger(__name__)
