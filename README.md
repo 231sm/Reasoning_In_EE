@@ -107,7 +107,7 @@ ACE 2005        | 599 | 4,090 | 8 | 33 | None |
 TAC KBP 2017    | 167 | 4,839 | 8 | 18  | None |
 FewEvent              | - | 70,852 | 19 | 100  | None |
 MAVEN           | 4,480 | 111,611 | 21 | 168  | None |
-$\texttt{OntoEvent}$    | 4,115 | 60,546 | 13 | 100 | 3,804 |
+***OntoEvent***    | 4,115 | 60,546 | 13 | 100 | 3,804 |
 
 ### Data Format
 The OntoEvent dataset is stored in json format.
