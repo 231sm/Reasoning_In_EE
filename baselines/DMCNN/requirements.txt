@@ -1,0 +1,5 @@
+numpy==1.19.5
+scikit_learn==1.0.2
+seqeval==1.2.2
+torch==1.6.0
+tqdm==4.63.1

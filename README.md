@@ -19,26 +19,95 @@ OntoED is a model that resolves event detection under low-resource conditions. I
 ## Project Structure
 The structure of data and code is as follows: 
 
-```
+```shell
 Reasoning_In_EE
- |-- OntoEvent  # data
- |    |-- event_dict_data_on_doc.json.zip   # raw full ED data
- |    |-- event_dict_train_data.json  #  ED data for training
- |    |-- event_dict_valid_data.json  #  ED data for validation
- |    |-- event_dict_test_data.json  #  ED data for testing
- |    |-- event_relation.json  #  event-event relation data
- |-- OntoED  # model
- |    |-- data_utils.py  # for data processing
- |    |-- ontoed.py  # main model
- |    |-- run_ontoed.py  #  for model running
- |    |-- run_ontoed.sh  #  bash file for model running
- |-- baselines # baseline models
- |    |-- DMCNN
- |    |    |-- will complete file information
- |    |-- JMEE
- |    |    |-- will complete file information
- |    |-- JRNN
- |    |    |-- will complete file information
+├── README.md
+├── OntoED			# model
+│   ├── README.md
+│   ├── data_utils.py		# for data processing
+│   ├── ontoed.py			# main model
+│   ├── run_ontoed.py		# for model running
+│   └── run_ontoed.sh		# bash file for model running
+├── OntoEvent		# data
+│   ├── README.md
+│   ├── __init__.py
+│   ├── event_dict_data_on_doc.json.zip		# raw full ED data
+│   ├── event_dict_train_data.json			# ED data for training
+│   ├── event_dict_test_data.json			# ED data for testing
+│   ├── event_dict_valid_data.json			# ED data for validation
+│   └── event_relation.json					# event-event relation data
+└── baselines		# baseline models
+    ├── DMCNN
+    │   ├── README.md
+    │   ├── convert.py			# for data processing
+    │   ├── data				# data
+    │   │   └── labels.json
+    │   ├── dmcnn.config		# configure training & testing
+    │   ├── eval.sh				# bash file for model evaluation
+    │   ├── formatter
+    │   │   ├── DmcnnFormatter.py	# runtime data processing
+    │   │   └── __init__.py
+    │   ├── main.py				# project entrance
+    │   ├── model
+    │   │   ├── Dmcnn.py		# main model
+    │   │   └── __init__.py
+    │   ├── raw
+    │   │   └── 100.utf8		# word vector
+    │   ├── reader
+    │   │   ├── MavenReader.py	# runtime data reader
+    │   │   └── __init__.py
+    │   ├── requirements.txt	# requirements
+    │   ├── train.sh			# bash file for model training
+    │   └── utils
+    │       ├── __init__.py
+    │       ├── configparser_hook.py
+    │       ├── evaluation.py
+    │       ├── global_variables.py
+    │       ├── initializer.py
+    │       └── runner.py
+    ├── JMEE
+    │   ├── README.md
+    │   ├── data				# to store data file
+    │   ├── enet
+    │   │   ├── __init__.py
+    │   │   ├── consts.py		# configurable parameters
+    │   │   ├── corpus
+    │   │   │   ├── Corpus.py	# dataset class
+    │   │   │   ├── Data.py
+    │   │   │   ├── Sentence.py
+    │   │   │   └── __init__.py
+    │   │   ├── models			# modules of JMEE
+    │   │   │   ├── DynamicLSTM.py
+    │   │   │   ├── EmbeddingLayer.py
+    │   │   │   ├── GCN.py
+    │   │   │   ├── HighWay.py
+    │   │   │   ├── SelfAttention.py
+    │   │   │   ├── __init__.py
+    │   │   │   ├── ee.py
+    │   │   │   └── model.py	# main model
+    │   │   ├── run
+    │   │   │   ├── __init__.py
+    │   │   │   └── ee
+    │   │   │       ├── __init__.py
+    │   │   │       └── runner.py	# runner class
+    │   │   ├── testing.py		# evaluation
+    │   │   ├── training.py		# training
+    │   │   └── util.py
+    │   ├── eval.sh				# bash file for model evaluation
+    │   ├── requirements.txt	# requirements
+    │   └── train.sh			# bash file for model training
+    ├── README.md
+    ├── eq1.png
+    ├── eq2.png
+    ├── jointEE-NN
+    │   ├── README.md
+    │   ├── data
+    │   │   └── fistDoc.nnData4.txt	# data format sample
+    │   ├── evaluateJEE.py			# model evaluation
+    │   ├── jeeModels.py			# main model
+    │   ├── jee_processData.py		# data process
+    │   └── jointEE.py				# project entrance
+    └── stanford.zip			# cleaned dataset for baseline models
 ```
 
 ## Requirements
