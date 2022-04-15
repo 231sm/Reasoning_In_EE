@@ -20,7 +20,7 @@ class OntoED(BertPreTrainedModel):
         # some hyperparameters
         self.ratio_proto_emb = 0.5 
         self.ratio_loss_ed = 1 
-        self.ratio_loss_op = 10 
+        self.ratio_loss_op = 5 
         self.ratio_loss_ol = 1
         self.proto = Proto(config.num_labels, config.hidden_size, self.ratio_proto_emb)
         self.relation = Relation(config.hidden_size)
