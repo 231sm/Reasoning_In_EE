@@ -51,8 +51,6 @@ Reasoning_In_EE
 
 - sklearn==0.20.2
 
-- seqeval
-
 
 ## Usage
 
