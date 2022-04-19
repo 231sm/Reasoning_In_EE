@@ -155,7 +155,7 @@ A folder with configuration, models weights, and results (in ```is_test_true_eva
 cd Reasoning_In_EE/OntoED
 
 ./run_ontoed.sh
-('--do_train', '--do_eval', '--evaluate_during_training', '--test' is necessarily input in 'run_ontoed.sh')
+('--do_train', '--do_eval', '--evaluate_during_training', '--do_test' is necessarily input in 'run_ontoed.sh')
 
 Or you can run run_ontoed.py with manual parameter input (parameters can be copied from 'run_ontoed.sh')
 
